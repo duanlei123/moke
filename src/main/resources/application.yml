@@ -1,0 +1,49 @@
+server:
+  port: ${server.port}
+  servlet:
+    context-path: ${server.context-path}
+
+spring:
+  datasource:
+    name: ${spring.datasource.name}
+    url: ${spring.datasource.url}
+    username: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    driver-class-name: ${spring.datasource.driver-class-name}
+    # druid datasource
+    type: ${spring.datasource.type}
+    druid:
+      filters: ${spring.datasource.filters}
+      max-active: ${spring.datasource.maxActive}
+      initial-size: ${spring.datasource.initialSize}
+      max-wait: ${spring.datasource.maxWait}
+      min-idle: ${spring.datasource.minIdle}
+      time-between-eviction-runs-millis: ${spring.datasource.timeBetweenEvictionRunsMillis}
+      min-evictable-idle-time-millis: ${spring.datasource.minEvictableIdleTimeMillis}
+      validation-query: ${spring.datasource.validationQuery}
+      test-while-idle: ${spring.datasource.testWhileIdle}
+      test-on-borrow: ${spring.datasource.testOnBorrow}
+      test-on-return: ${spring.datasource.testOnReturn}
+      pool-prepared-statements: ${spring.datasource.poolPreparedStatements}
+      max-open-prepared-statements: ${spring.datasource.maxOpenPreparedStatements}
+  mvc:
+    view:
+      prefix: ${mvc.view.prefix}
+      suffix: ${mvc.view.suffix}
+    static-path-pattern: ${spring.mvc.static-path-pattern}
+  resources:
+    static-locations: ${spring.resources.static-locations}
+
+  freemarker:
+    cache: ${freemarker.cache}
+    request-context-attribute: ${freemarker.request-context-attribute}
+
+mybatis:
+  type-aliases-package: ${mybatis.type-aliases-package}
+  mapper-locations: ${mybatis.mapperLocations}
+
+log4j:
+  logfile: ${log4j.logfile}
+  console: ${log4j.console}
+  additivity: ${log4j.additivity}
+
